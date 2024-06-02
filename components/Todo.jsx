@@ -1,14 +1,14 @@
-function Todo() {
+import './Todo.css'
+
+function Todo({title}) {
     return (
-        <div>
-      <h2>
-        Finish Frontend Simplified
-      </h2>
-      <button>
-        Delete
-      </button>
+      <div className="todo">
+        <h2>{title}</h2>
+        <button>
+          Delete
+        </button>
+      </div>
       
-    </div>
     )
 }
 
