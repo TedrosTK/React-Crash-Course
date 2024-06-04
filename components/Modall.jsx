@@ -1,12 +1,6 @@
 import './Modall.css'
 
-function Modal({title}) {
-  function cancelClicked(){
-    console.log('Cancel')
-  }
-  function confirmClicked(){
-    console.log('Confirm')
-  }
+function Modal({title, cancelClicked, confirmClicked}) {
     return (
         <div>
         <div className="modal">

@@ -1,34 +1,22 @@
-import './Counter.css'
-import React, {useState} from 'react'
+import "./Counter.css";
+import React, { useState } from "react";
 
 function Counter() {
-    const [cart, setCart] = useState({
-        item:"apple", 
-        quantity:0
-    });
+    const [arr, setArr] = useState([])
 
-    function addApple() {
-        setCart(prevCart => ({
-            ...prevCart,
-            quantity: prevCart.quantity + 1,
-        }))
+    function addPlus() {
+        setArr(prevArr => [...prevArr, "+"])
     }
-    function removeApple() {
-        setCart(prevCart => ({
-            ...prevCart,
-            quantity: prevCart.quantity - 1,
-        }))
+    function addMinus() {
+        setArr(prevArr => [...prevArr, "-"])
     }
-    
-    return (
+  return (
     <div>
-        <button onClick={removeApple}>-</button>
-        {cart.quantity + " "} 
-        {cart.item +"s"}
-        <button onClick={addApple}>+</button>
+      <button onClick={addMinus}>-</button>
+      <button onClick={addPlus}>+</button>
+      {arr.toString()}
     </div>
-      
-    )
+  );
 }
 
-export default Counter
+export default Counter;
