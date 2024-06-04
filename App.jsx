@@ -17,9 +17,10 @@ function App() {
         title="Finish Interview Section"
         paragraph="Finish every interview question in the next 6 weeks."
         />
-        <Todo title="Land a $100k Job"/>
+        <Todo title="Land a $100k Job"
+        paragraph="Apply to 100 jobs"/>
       </div>
-      {/* <Modal /> */}
+      <Modal title="Do you want to proceed?"/>
     </div>
   );
 }
